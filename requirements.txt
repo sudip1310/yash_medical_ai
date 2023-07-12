@@ -1,0 +1,15 @@
+langchain==0.0.207
+openai==0.27.7
+Pillow==9.5.0
+PyPDF2==3.0.1
+python-dotenv==1.0.0
+streamlit==1.23.1
+streamlit_authenticator==0.2.1
+streamlit_option_menu==0.3.6
+SpeechRecognition==3.9.0
+audio-recorder-streamlit==0.0.8
+pydub==0.25.1
+faiss-cpu==1.7.4
+PyAudio== 0.2.11
+
+sentence_transformers==2.2.2
