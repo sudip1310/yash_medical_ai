@@ -8,6 +8,9 @@ from admin import admin_page
 from doctor import doctor_page
 from member_v2 import member_page
 from PIL import Image
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 
 st.set_page_config(layout="wide")
 
