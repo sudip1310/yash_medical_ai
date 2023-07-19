@@ -16,6 +16,7 @@ import tempfile
 # from st_custom_components import st_audiorec
 from audio_recorder_streamlit import audio_recorder
 from pydub import AudioSegment as am
+from langchain.vectorstores.chroma import Chroma
 
 r = sr.Recognizer()
 
@@ -162,10 +163,13 @@ def member_page():
     
             chunk_lst = get_chunk_lst(pdf_text)
             embeddings = get_embeddings()
-            doc_search = FAISS.from_texts(chunk_lst, embeddings)
+            #doc_search = FAISS.from_texts(chunk_lst, embeddings)
+            vectordb = Chroma.from_documents(chunk_lst, embeddings)//edited
+            
             chain = get_qa_chain()
             query = question
-            docs = doc_search.similarity_search(query)
+            #docs = doc_search.similarity_search(query)
+            docs=vectordb.similarity_search(query)//edited
                 #op = chain.run(input_documents=docs, question=query)
             try:
                 op = chain.run(input_documents=docs, question=query)
