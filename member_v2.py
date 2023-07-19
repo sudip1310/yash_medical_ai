@@ -280,7 +280,7 @@ def member_page():
 #                 else:
 #                     st.write(op)
 #             except Exception as e:
-#                 st.write("Apologies! The information you have requested is not available at this point")
+#                 st.write("Apologies! The information you have requested is not available at this point",e)
 #         else:
 #             st.warning("Please select a PDF.")
 #         audio_bytes = False
