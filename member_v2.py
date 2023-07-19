@@ -164,12 +164,12 @@ def member_page():
             chunk_lst = get_chunk_lst(pdf_text)
             embeddings = get_embeddings()
             #doc_search = FAISS.from_texts(chunk_lst, embeddings)
-            vectordb = Chroma.from_texts(chunk_lst, embeddings)//edited
+            vectordb = Chroma.from_texts(chunk_lst, embeddings)#edited
             
             chain = get_qa_chain()
             query = question
             #docs = doc_search.similarity_search(query)
-            docs=vectordb.similarity_search(query)//edited
+            docs=vectordb.similarity_search(query)#edited
                 #op = chain.run(input_documents=docs, question=query)
             try:
                 op = chain.run(input_documents=docs, question=query)
