@@ -6,7 +6,8 @@ import os
 from streamlit_option_menu import option_menu
 from admin import admin_page
 from doctor import doctor_page
-from member_v2 import member_page
+#from member_v2 import member_page
+from member_telegu import member_page
 from PIL import Image
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
